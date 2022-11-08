@@ -1,10 +1,15 @@
 *.c~
 *.c#
 *.o
+src/*.c~
+src/*.c#
+src/*.o
 /coding-style-checker/
 .log
 .out
 /test/
 bsq
 Book1ThePhilosophersStone.txt
-/includes/Makefile
+/lib/Book1ThePhilosophersStone.txt
+/lib/Makefile
+/lib/.git/
