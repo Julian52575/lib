@@ -9,7 +9,7 @@ SRC = 	$(wildcard src/*.c lib/my/*.c)
 
 OBJ = $(SRC:.c=.o)
 
-CFLAGS += -Wextra -I./includes -L./lib/my -lmy
+CFLAGS += -Wextra -I./lib/includes -L./lib/my -lmy
 
 NAME = "bsq"
 
