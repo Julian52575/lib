@@ -1,0 +1,9 @@
+*.c~
+*.c#
+*.o
+/coding-style-checker/
+.log
+.out
+/test/
+bsq
+Book1ThePhilosophersStone.txt
