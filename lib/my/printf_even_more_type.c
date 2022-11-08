@@ -38,5 +38,5 @@ int printf_b(va_list ap, char *string, flag flags)
     if ( ((flags).order) == 1)
         printf_width(ap, string, flags);
 
-    return get_unit(nb);
+    return get_unit(tmp);
 }
