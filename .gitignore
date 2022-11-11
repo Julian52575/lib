@@ -13,3 +13,5 @@ Book1ThePhilosophersStone.txt
 /lib/Book1ThePhilosophersStone.txt
 /lib/Makefile
 /lib/.git/
+build.sh
+a.out
