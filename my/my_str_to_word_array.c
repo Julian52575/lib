@@ -29,6 +29,7 @@ char **my_str_to_word_array(char const *str)
         string[s++] = str[i];
     }
     string[s] = '\0';
-    array[a] = string;
+    array[a++] = string;
+    array[a] = "\0";
     return array;
 }
