@@ -34,3 +34,5 @@ int my_strlen(char const *str);
 void my_swap(int *a, int *b);
 unsigned int my_unsigned_int(unsigned int nb);
 unsigned int my_put_binary(unsigned int nb);
+char **my_str_to_word_array(char const *str);
+void my_put_array(char **array, char del);
