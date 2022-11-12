@@ -8,6 +8,7 @@
 #include <stdlib.h>
 int my_strlen(char const *str);
 char *my_strcpy(char *dest, char const *src);
+void my_put_array(char **array, char del);
 
 char **my_str_to_word_array(char const *str)
 {
