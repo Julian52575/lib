@@ -5,6 +5,8 @@
 ** the ultimate .h file you have ever seen
 */
 
+#pragma once
+
 #include "my.h"
 #include "my_printf.h"
 
