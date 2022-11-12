@@ -4,6 +4,7 @@
 ** File description:
 ** Print a character
 */
+#include <unistd.h>
 
 void my_putchar(char c)
 {
