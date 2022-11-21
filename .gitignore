@@ -16,3 +16,6 @@ Book1ThePhilosophersStone.txt
 build.sh
 a.out
 *.code-workspace
+lib/coding-style-checker/
+lib/coding-style-reports.log
+coding-style-reports.log
