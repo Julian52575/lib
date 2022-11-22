@@ -9,12 +9,12 @@ SRC = 	$(wildcard src/*.c lib/my/*.c)
 
 OBJ = $(SRC:.c=.o)
 
-CFLAGS += -Wextra -I./lib/includes -L./lib/my -lmy
+CFLAGS += -g -Wall -Wextra -I./lib/includes -L./lib/my -lmy
 
-NAME = "bsq"
+NAME = "BinaryName"
 
 $(NAME): $(OBJ)
-	gcc -o $(NAME) $(OBJ)
+	gcc -g -o $(NAME) $(OBJ)
 
 all:     $(NAME)
 
