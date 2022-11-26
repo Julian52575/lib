@@ -18,6 +18,11 @@ $(NAME): $(OBJ)
 
 all:     $(NAME)
 
+clear:
+	make
+	clear
+	echo "Done !"
+
 clean:
 	rm -f $(OBJ)
 
