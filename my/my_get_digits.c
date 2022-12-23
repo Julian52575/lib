@@ -12,7 +12,7 @@ int get_1st_digit(int nb)
 
 int get_2nd_digit(int nb)
 {
-    return( (nb / 10) % 10);
+    return ((nb / 10) % 10);
 }
 
 int get_3rd_digit(int nb)
