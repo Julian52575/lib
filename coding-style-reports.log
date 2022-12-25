@@ -1,8 +1,8 @@
 ./Makefile:35: illegal token in column 22, giving up (hint: fix the file or remove it from the working set)
 ./a.out:1: MAJOR:C-O1
 ./build.sh~:1: MAJOR:C-O1
+./my/#my_str_combine.c#:1: MAJOR:C-O1
 ./my/my_str_combine.c~:1: MAJOR:C-O1
-./my_str_to_word_array.o:1: MAJOR:C-O1
 ./test/a.out:1: MAJOR:C-O1
 ./test/main.c:1: MINOR:C-G1
 ./test/main.c:1: MINOR:C-G8

@@ -38,3 +38,6 @@ char **my_str_to_word_array(char const *str);
 void my_put_array(char **array, char del);
 int my_is_alpha(char *str1, char *str2);
 int my_putstr(char const *str);
+char *my_str_combine(char *goku, char *vegeta, char delimeter);
+int my_str_compare(char *str1, char *str2);
+
