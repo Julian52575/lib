@@ -22,7 +22,7 @@ void put_expo(double db, int count, int precision)
         if (count < 10)
             my_putchar('0');
         my_put_nbr(count);
-    }
+    } return;
 }
 
 int my_put_exponential(double db, int precision)
@@ -44,5 +44,5 @@ int my_put_exponential(double db, int precision)
             nb = db;
         }
     }
-    put_expo(db, count, precision);
+    return put_expo(db, count, precision);
 }
