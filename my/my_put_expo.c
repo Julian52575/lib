@@ -44,5 +44,6 @@ int my_put_exponential(double db, int precision)
             nb = db;
         }
     }
-    return put_expo(db, count, precision);
+    put_expo(db, count, precision);
+    return 1;
 }

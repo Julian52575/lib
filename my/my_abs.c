@@ -15,7 +15,6 @@
 #include <SFML/System/Vector2.h>
 #include <stddef.h>
 #include <stdio.h>
-#include "my_csfml.h"
 
 float my_abs_float(float i)
 {
