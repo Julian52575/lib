@@ -4,6 +4,7 @@
 ** File description:
 ** str 1 + delimeter + str 2 = 1 big str
 */
+#include <stdlib.h>
 int my_strlen(char *str);
 
 //fuses the 2 strings and the delimeter in between (unless delimeter == NULL);
