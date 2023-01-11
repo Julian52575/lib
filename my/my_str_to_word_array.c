@@ -10,25 +10,24 @@ int my_strlen(char const *str);
 char *my_strcpy(char *dest, char const *src);
 void my_put_array(char **array, char del);
 
-char **my_str_to_word_array(char const *str)
+char **my_new_str_to_word_array(char *str)
 {
-    int a = 0;
-    int s = 0;
-    char **array = malloc(my_strlen(str) * 10);
-    char *string = malloc(my_strlen(str));
-    for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] == '\n' || str[i] == ' ') {
-            string[s++] = '\0';
-            array[a] = malloc(my_strlen(string) + 1);
-            my_strcpy(array[a++], string);
-
-            free(string);
-            string = malloc(my_strlen(str + i));
-            s = 0;
-            continue;
-        } string[s++] = str[i];
-    } string[s] = '\0';
-    array[a++] = string;
-    array[a] = "\0";
+    char **array = malloc( sizeof(char *) * my_strlen(str) + 1);
+    int y = 0;
+    int x = 0;
+    while (str[0]) {
+        while (str[0] == ' ' || str[0] == '\t') ++str;
+        array[y] = malloc( sizeof(char) * my_strlen(str) );
+        while (str[0] && (str[0] != ' ' && str[0] != '\n') ) {
+            array[y][x++] = str[0];
+            str++;
+        }
+        array[y][x] = '\0';
+        x = 0;
+        y++;
+    }
+    array[y] = malloc(sizeof(char) * 1);
+    array[y][0] = '\0';
     return array;
 }
+

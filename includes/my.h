@@ -47,3 +47,4 @@ int my_get_file_size(char *file_path, struct stat *prev_sb);
 char *my_int_to_str(int nb);
 int get_int_lenght(int nb);
 double my_str_to_double(char *str);
+char *my_get_str_until_c(char *str, char end);
