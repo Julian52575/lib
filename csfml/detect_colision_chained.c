@@ -16,32 +16,32 @@
 #include <stddef.h>
 #include <stdio.h>
 #include "my_csfml.h"
-#include "hunter.h"
-static int detect_colision_chained2(int x, int y, cenemies *ce);
+// #include "hunter.h"
+// static int detect_colision_chained2(int x, int y, cenemies *ce);
 
-int detect_colision_chained(sfRenderWindow *window, int x, int y, clevel *cl)
-{
-    cenemies *tmp = cl->ce;
-    while (tmp) {
-        if (detect_colision_chained2(x, y, tmp) == 1) {
-            cl->cc = cl->cc->next;
-            sfSound_play(cl->cc->sound);
-            cl->info = cl->cc->msg;
-            tmp->hp -= cl->cc->attack;
-            killing_enemy(window, tmp);
-            return 1;
-        }
-        tmp = tmp->next;
-    }
-    return 0;
-}
+// int detect_colision_chained(sfRenderWindow *window, int x, int y, clevel *cl)
+// {
+//     cenemies *tmp = cl->ce;
+//     while (tmp) {
+//         if (detect_colision_chained2(x, y, tmp) == 1) {
+//             cl->cc = cl->cc->next;
+//             sfSound_play(cl->cc->sound);
+//             cl->info = cl->cc->msg;
+//             tmp->hp -= cl->cc->attack;
+//             killing_enemy(window, tmp);
+//             return 1;
+//         }
+//         tmp = tmp->next;
+//     }
+//     return 0;
+// }
 
-static int detect_colision_chained2(int x, int y, cenemies *ce)
-{
-    if (x >= ce->pos.x && x <= ce->pos.x + ce->x_hitbox) {
-        if (y >= ce->pos.y && y <= ce->pos.y + ce->y_hitbox) {
-            return 1;
-        }
-    }
-    return -1;
-}
+// static int detect_colision_chained2(int x, int y, cenemies *ce)
+// {
+//     if (x >= ce->pos.x && x <= ce->pos.x + ce->x_hitbox) {
+//         if (y >= ce->pos.y && y <= ce->pos.y + ce->y_hitbox) {
+//             return 1;
+//         }
+//     }
+//     return -1;
+// }

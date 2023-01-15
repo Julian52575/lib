@@ -7,7 +7,7 @@ src/*.o
 /coding-style-checker/
 .log
 .out
-/test/
+test/
 bsq
 Book1ThePhilosophersStone.txt
 /lib/Book1ThePhilosophersStone.txt
@@ -19,3 +19,5 @@ a.out
 lib/coding-style-checker/
 lib/coding-style-reports.log
 coding-style-reports.log
+src/
+

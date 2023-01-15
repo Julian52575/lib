@@ -48,3 +48,6 @@ char *my_int_to_str(int nb);
 int get_int_lenght(int nb);
 double my_str_to_double(char *str);
 char *my_get_str_until_c(char *str, char end);
+int my_str_append_until(char *str, char end, char *buffer, int b_start);
+int my_get_int_lenght(int nb);
+int my_ascii_test(char c);

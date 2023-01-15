@@ -1,11 +1,2 @@
 ./Makefile:35: illegal token in column 22, giving up (hint: fix the file or remove it from the working set)
-./a.out:1: MAJOR:C-O1
-./my/#my_str_combine.c#:1: MAJOR:C-O1
-./my/#my_str_compare.c#:1: MAJOR:C-O1
 ./test/a.out:1: MAJOR:C-O1
-./test/main.c:1: MINOR:C-G1
-./test/main.c:1: MINOR:C-G8
-./test/main.c:6: MINOR:C-L2
-./test/main.c:7: MINOR:C-L2
-./test/main.c:8: MINOR:C-L2
-./test/main.c~:1: MAJOR:C-O1

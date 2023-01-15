@@ -43,7 +43,7 @@ int display_chained_sprites(sfRenderWindow *window, csprites *cs)
     return n;
 }
 
-int destroy_chained_sprites(sfRenderWindow *window, csprites *cs)
+int destroy_chained_sprites(csprites *cs)
 {
     int n = 0;
     while (cs) {
