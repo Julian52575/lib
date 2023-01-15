@@ -16,7 +16,7 @@
 #include <unistd.h>
 
 int my_compute_power_rec(int nb, int p);
-int get_unit(int nb);
+int my_get_unit(int nb);
 int my_getnbr(char *str);
 int my_isneg(int nb);
 int my_put_double(double db, long precision);

@@ -20,4 +20,5 @@ lib/coding-style-checker/
 lib/coding-style-reports.log
 coding-style-reports.log
 src/
+compilation.sh
 

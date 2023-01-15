@@ -7,11 +7,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 int my_compute_power_rec(int a, int b);
-int get_int_lenght(int nb);
+int my_get_int_lenght(int nb);
 
 static char *my_int_to_str_neg(int nb)
 {
-    int lenght = get_int_lenght(nb);
+    int lenght = my_get_int_lenght(nb);
     char *str;
     str = malloc(sizeof(char) * lenght + 2);
     str[0] = '-';
@@ -27,7 +27,7 @@ static char *my_int_to_str_neg(int nb)
 
 static char *my_int_to_str_pos(int nb)
 {
-    int lenght = get_int_lenght(nb);
+    int lenght = my_get_int_lenght(nb);
     char *str = malloc(sizeof(char) * lenght + 1);
     str[lenght] = '\0';
     --lenght;

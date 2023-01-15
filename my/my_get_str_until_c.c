@@ -5,13 +5,7 @@
 ** return a string from beggining to 2nd character passed as a parameter
 */
 
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
 #include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <new_lib.h>
 #include <my.h>
 
 char *my_get_str_until_c(char *str, char end)
