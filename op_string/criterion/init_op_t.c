@@ -42,5 +42,5 @@ Test(init_str, init_testing) {
     cr_assert( my_strcmp(o.string, test ) == 0,
             "Got string _%s_ insd _%s_\n", o.string, test );
     cr_assert( o.str_len == 11 );
-    cr_assert( o.mem_len == 12 );
+    cr_assert( o.mem_len == 11 );
 }
