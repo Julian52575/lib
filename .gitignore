@@ -1,6 +1,7 @@
 *.o
 *~
 *#
+vgcore*
 coding-style*
 a.out
 unit_test
