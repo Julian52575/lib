@@ -7,5 +7,7 @@
 
 int my_strlen_op(char *str)
 {
+    if (!str)
+        return 0;
     return (str[0] ? 1 + my_strlen_op(str + 1) : 0); 
 }

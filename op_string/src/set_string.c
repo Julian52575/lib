@@ -7,15 +7,6 @@
 
 #include "op_string.h"
 
-static void set_to_null(struct op_string_s *o)
-{
-    if (o->string)
-        free(o->string);
-    o->str_len = 0;
-    o->mem_len = 0;
-    o->string = NULL;
-}
-
 static void allocate_memory(struct op_string_s *o, int size)
 {
     if ( o->string )
@@ -24,26 +15,50 @@ static void allocate_memory(struct op_string_s *o, int size)
     o->mem_len = size;
 }
 
-static void copy_string(struct op_string_s *o, char *str, int str_lenght)
+static void fill_lenght_array(int number_of_string,
+        int *lenght_array, va_list ap)
+{
+    va_list tmp = { 0 };
+    char *current = NULL;
+
+    va_copy(tmp, ap);
+    for ( int i = 0; i < number_of_string; i++ ) {
+        current = va_arg( tmp, char * );
+        lenght_array[i] = my_strlen_op( current );
+    }
+}
+
+static int copy_string(struct op_string_s *o, char *str, int current_postion)
 {
     int i = 0;
 
-    for (; i < str_lenght; i++)
-        o->string[ i ] = str[ i ];
-    o->str_len = i;
-    o->string[ i ] = '\0';
-    for (; i < o->mem_len; i++)
-        o->string[ i ] = '\0';
+    for (; str[ i ]; i++) {
+        o->string[ current_postion + i ] = str[ i ];
+    }
+    return current_postion + i;
 }
 
-void set_string_op_string(struct op_string_s *o, char *str)
+//set_string(o, 3, "a", "b", "c");
+void set_string_op_string(struct op_string_s *o, int number_of_string, ...)
 {
-    int str_lenght = my_strlen_op(str);
+    va_list ap = { 0 };
+    int *lenght_array = malloc(sizeof(int) * (number_of_string + 1));
+    int total_lenght = 0;
+    int current_postion = 0;
+    char *current_str = NULL;
 
-    if (!str)
-        return set_to_null(o);
-    if (str_lenght > o->mem_len)
-        allocate_memory(o, str_lenght);
-    copy_string(o, str, str_lenght);
+    va_start(ap, number_of_string);
+    fill_lenght_array(number_of_string, lenght_array, ap);
+
+    for (int i = 0; i < number_of_string; i++)
+        total_lenght += lenght_array[ i ];
+
+    if ( o->mem_len < total_lenght )
+        allocate_memory( o, total_lenght );
+    for (int y = 0; y < number_of_string; y++) {
+        current_str = va_arg( ap, char * );
+        current_postion = copy_string( o, current_str, current_postion );
+    }
+    o->str_len = total_lenght;
+    free(lenght_array);
 }
-
