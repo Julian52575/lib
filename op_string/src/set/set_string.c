@@ -9,8 +9,6 @@
 
 static void allocate_memory(struct op_string_s *o, int size)
 {
-    if ( o->string )
-        free(o->string);
     o->string = malloc(sizeof(char) * (size + 1));
     o->mem_len = size;
 }
@@ -49,16 +47,15 @@ void set_string_op_string(struct op_string_s *o, int number_of_string, ...)
 
     va_start(ap, number_of_string);
     fill_lenght_array(number_of_string, lenght_array, ap);
-
     for (int i = 0; i < number_of_string; i++)
         total_lenght += lenght_array[ i ];
-
     if ( o->mem_len < total_lenght )
         allocate_memory( o, total_lenght );
     for (int y = 0; y < number_of_string; y++) {
         current_str = va_arg( ap, char * );
         current_postion = copy_string( o, current_str, current_postion );
     }
+    o->string[current_postion] = '\0';
     o->str_len = total_lenght;
     free(lenght_array);
 }

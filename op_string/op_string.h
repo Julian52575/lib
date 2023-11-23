@@ -5,6 +5,7 @@
 ** an useful homebrewed string lib
 */
 
+#pragma once
 #include <criterion/criterion.h>
 #include <stddef.h>
 #include <stdio.h>
@@ -16,6 +17,7 @@
 #define MAX_MEMORY_DIFFERENCE 100
 
 int my_strlen_op(char *str);
+bool my_strcmp(char *s1, char *s2);
 
 typedef struct op_string_s {
     char * string;

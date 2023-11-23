@@ -29,8 +29,8 @@ static void set_function_pointer(struct op_string_s *o)
 
 static void get_function_pointer(struct op_string_s *o)
 {
-    /*
-    o->get_string = &get_string_op_string;
+
+    o->get_string = &get_string_op_string;/*
     o->get_lenght = &get_lenght_op_string;
     o->get_indexes = &get_indexes_op_string;
     o->get_word_count = &get_word_count_op_string;
