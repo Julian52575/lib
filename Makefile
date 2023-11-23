@@ -5,30 +5,26 @@
 ## it makes files
 ##
 
-SRC = 	$(wildcard src/*.c lib/my/*.c)
+SRC 	= 	lib/my_str_to_word_array.c
 
-OBJ = $(SRC:.c=.o)
+CRITERION 	= 	criterion/my_str_to_word_array_t.c
 
-CFLAGS += -g -Wall -Wextra -I./lib/includes -L./lib/my -lmy
+OBJ 	= 	$(SRC:.c=.o)
 
-NAME = "BinaryName"
+CFLAGS += -g3 -Wall -Wextra
 
-$(NAME): $(OBJ)
-	gcc -g -o $(NAME) $(OBJ)
+CRITERIONFLAGS 	= 	-lcriterion
 
-all:     $(NAME)
+NAME = "unit_test"
 
-clear:
-	make
-	clear
-	echo "Done !"
+all:
+	gcc -o $(NAME) \
+			$(SRC) \
+			$(CRITERION) \
+			$(CFLAGS) \
+			$(CRITERIONFLAGS)
+	echo -e "Running test..."
+	./unit_test --crash #--ascii
 
-clean:
-	rm -f $(OBJ)
 
-fclean: clean
-	rm -f $(NAME)
-
-re:     fclean all
-
-.PHONY: all clean fclean re clear
+.PHONY: all
